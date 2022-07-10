@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habr Exercise</title>
+
+    <style>
+        .container {
+            display: grid;
+            gap: 5px;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            grid-template-rows: repeat(2, 100px);
+
+        }
+
+        .container>div>img {
+            width: 100%;
+            /*height: 100%;*/
+            object-fit: cover;
+        }
+
+        .cell-1 {
+            background: yellow;
+        }
+
+        .cell-2 {
+            background: rgb(0, 157, 255);
+        }
+
+        .cell-3 {
+            background: rgb(148, 236, 124);
+        }
+
+        .cell-4 {
+            background: rgb(227, 118, 151);
+        }
+
+        .cell-5 {
+            background: rgb(0, 255, 51);
+        }
+
+        .cell-6 {
+            background: rgb(238, 151, 58);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="cell-1"><img src="./photo/podarki.png" /> </div>
+        <div class=" cell-2"><img src="./photo/sweets.png" /></div>
+        <div class="cell-3"><img src="./photo/podarki.png" /></div>
+        <div class="cell-4"><img src="./photo/sweets.png" /></div>
+        <div class="cell-5"><img src="./photo/podarki.png" /></div>
+        <div class="cell-6"><img src="./photo/sweets.png" /></div>
+    </div>
+
+</body>
+
+</html>
