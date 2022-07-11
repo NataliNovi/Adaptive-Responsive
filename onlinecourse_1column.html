@@ -34,6 +34,28 @@
 
         }
 
+        .header1 {
+            grid-row: 1/3;
+            grid-column: 1/8;
+
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+
+        .header2 {
+            grid-row: 1/3;
+            grid-column: 8/16;
+
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+
+
+
         .menu {
             grid-row: 1/3;
             grid-column: 3/9;
@@ -41,8 +63,9 @@
             justify-content: space-around;
             align-items: center;
             width: 40%;
-            font-size: 0.8vw;
+            font-size: 1.5vw;
             flex-wrap: nowrap;
+            margin-left: 1.5vw;
 
         }
 
@@ -65,15 +88,17 @@
 
         .button {
             /*get consultation*/
-            grid-row: 1/3;
+            /*grid-row: 1/3;
             grid-column: 8/10;
-            padding: 9%;
-            font-size: 1vw;
+            padding: 9%;*/
+            font-size: 1.5vw;
             background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
             border-radius: 0.5em;
             border: 0.1vw solid #FF3F3A;
             font-family: 'Lato', sans-serif;
             color: white;
+            width: 15vw;
+            height: 6vh;
         }
 
 
@@ -90,6 +115,7 @@
             max-width: 100%;
             width: 100%;
             padding: 5%;
+            margin-top: 0.5vh;
         }
 
 
@@ -112,7 +138,7 @@
         .login {
             grid-row: 1/3;
             grid-column: 10/12;
-            font-size: 0.8vw;
+            font-size: 1.5vw;
             color: #424551;
         }
 
@@ -180,7 +206,7 @@
             width: 15vw;
             padding: 2 0 5 0;
 
-            font-size: 1vw;
+            font-size: 1.5vw;
             background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
             border-radius: 0.5vw;
             border: 0.1vw solid #FF3F3A;
@@ -192,7 +218,7 @@
 
             width: 15vw;
             padding: 2 0 5 0;
-            font-size: 1vw;
+            font-size: 1.5vw;
             background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
             border-radius: 0.5vw;
             border: 0.1vw solid #FF3F3A;
@@ -217,11 +243,11 @@
             padding: 2%;
             color: #424551;
             font-family: 'Lato', sans-serif;
-            font-size: 1vw;
+            font-size: 1.5vw;
         }
 
         .big {
-            font-size: 2vw;
+            font-size: 2.5vw;
         }
 
         @media screen and (min-width: 1024px)
@@ -252,11 +278,11 @@
             .footer_item_item4 {
                 padding: 2%;
                 color: #424551;
-                font-size: 1vw;
+                font-size: 1.5vw;
             }
 
             .big {
-                font-size: 2vw;
+                font-size: 2.5vw;
             }
         }
 
@@ -280,12 +306,39 @@
 
         }
 
-        @media screen and (max-width: 767px) {
+        @media screen and (min-width: 420px) and (max-width:767px) {
+
+            /*для среднего размера экранов*/
+
+
+            .footer {
+                display: none;
+            }
+        }
+
+
+
+        @media screen and (max-width: 420px) {
             /*для небольших экранов*/
 
             .footer {
                 display: none;
             }
+
+            .menu {
+                grid-row: 1/3;
+                grid-column: 3/9;
+                display: inline-flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 40%;
+                font-size: 3.5vw;
+                flex-wrap: nowrap;
+                margin-left: 1.5vw;
+
+            }
+
+
 
         }
     </style>
@@ -295,24 +348,26 @@
 
     <div class="container">
         <header class="header">
-            <span class="pictContainer">
-                <img class="pict" src=./photo/logo.png />
-            </span>
+            <div class="header1"> <span class="pictContainer">
+                    <img class="pict" src=./photo/logo.png />
+                </span>
 
-            <nav class="menu">
-                <span class="nav_item_item1">AboutUs</span>
-                <span class="nav_item_item2">Courses</span>
-                <span class="nav_item_item3">Events</span>
-                <span class="nav_item_item4">Blog</span>
-                <span class="nav_item_item5">Contacts</span>
-            </nav>
+                <nav class="menu">
+                    <span class="nav_item_item1">AboutUs</span>
+                    <span class="nav_item_item2">Courses</span>
+                    <span class="nav_item_item3">Events</span>
+                    <span class="nav_item_item4">Blog</span>
+                    <span class="nav_item_item5">Contacts</span>
+                </nav>
+            </div>
 
-            <button class="button">Get consultation</button>
+            <div class="header2"> <button class="button">Get consultation</button>
 
-            <span class="login">
-                <span class="login_pict_Container">
-                    <img class="login_pict" src=./photo/icon.png />
-                    <a> Log in/Register</a> </span> </span>
+                <span class="login">
+                    <span class="login_pict_Container">
+                        <img class="login_pict" src=./photo/icon.png />
+                        <a> Log in/Register</a> </span> </span>
+            </div>
 
         </header>
         <main class="main">
